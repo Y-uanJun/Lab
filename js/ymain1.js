@@ -32,14 +32,14 @@ requirejs(['jquery','yTime','Ajax'],function   ($,yTime,Ajax) {
 
     url="http://rap.taobao.org/mockjsdata/10008/index.do";
     ajax(url,"GET",function(data){
-    	var yResearch = JSON.parse(data).data;//研究动态数组
+    	var yResearch = JSON.parse(data).data.research;//研究动态数组
       var NewResearch=[];//限制字符串后的数组
-      var ReTitle=[yResearch[0].title,yResearch[1].title,yResearch[2].title,yResearch[3].title];
+      var ReTitle=[yResearch[0].title,yResearch[1].title,yResearch[2].title,yResearch[3].title,yResearch[4].title];
       //遍历研究动态的题目数组，限制题目字数，每个题目最多20字；
       var MapReTitle = ReTitle.map(function(item){
-         var str_length = 0;
-         var str_len = 0;
-         var len=40;
+         var str_length = 0,
+	         str_len = 0,
+	         len=46;
          str_cut = new String();
          str_len = item.length;
          for(var i = 0;i<str_len;i++){
@@ -62,7 +62,7 @@ requirejs(['jquery','yTime','Ajax'],function   ($,yTime,Ajax) {
       });
       console.log( MapReTitle);
       //研究动态列表
-    	for(var i=0;i<4;i++){
+    	for(var i=0;i<5;i++){
     		var Research=document.getElementById("yResearch");
 
     		var RUl=document.createElement("ul");
@@ -76,18 +76,18 @@ requirejs(['jquery','yTime','Ajax'],function   ($,yTime,Ajax) {
     		RLi.appendChild(RLink);
 
     		var RText=document.createElement("p");
-    		RText.innerHTML=MapReTitle[i]+"&nbsp;&nbsp;"+yResearch[i].date;
+    		RText.innerHTML=MapReTitle[i]+"&nbsp;&nbsp;&nbsp;"+yResearch[i].date;
     		RLink.appendChild(RText);
     	}
 
       
-    	var yTeach = JSON.parse(data).dynamic;//教学动态数据
-       var TeTitle=[yTeach[0].title,yTeach[1].title,yTeach[2].title,yTeach[3].title];
+    	var yTeach = JSON.parse(data).data.activity;//教学动态数据
+       var TeTitle=[yTeach[0].title,yTeach[1].title,yTeach[2].title,yTeach[3].title,yTeach[4].title];
       //遍历研究动态的题目数组，限制题目字数，每个题目最多20字；
       var MapTeTitle = TeTitle.map(function(item,index,array){
          var str_length = 0;
-         var str_len = 0;
-         var len=40;
+	         str_len = 0,
+	         len=46;
          str_cut = new String();
          str_len = item.length;
          for(var i = 0;i<str_len;i++){
@@ -109,7 +109,7 @@ requirejs(['jquery','yTime','Ajax'],function   ($,yTime,Ajax) {
         }
       });
       //教学活动列表
-    	for(var i=0;i<4;i++){
+    	for(var i=0;i<5;i++){
     		var Teach=document.getElementById("yTeach");
 
     		var TUl=document.createElement("ul");
@@ -123,7 +123,7 @@ requirejs(['jquery','yTime','Ajax'],function   ($,yTime,Ajax) {
     		TLi.appendChild(TLink);
 
     		var TText=document.createElement("p");
-    		TText.innerHTML=TeTitle[i]+"&nbsp;&nbsp;"+yTeach[i].date;
+    		TText.innerHTML=TeTitle[i]+"&nbsp;&nbsp;&nbsp;"+yTeach[i].date;
     		TLink.appendChild(TText);
 
     	}
