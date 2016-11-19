@@ -229,7 +229,7 @@ h1.logo img {
 	float: left;
 	/*position: relative;*/
 	width:100%;
-	height:220px;
+	min-height:220px;
 	/*border:1px solid #ccc;*/
 }
 /*研究动态、教学活动标题背景*/
@@ -280,7 +280,7 @@ h1.logo img {
 	float: left;
 	/*position: relative;*/
 	width:100%;
-	height:260px;
+	min-height:255px;
 }
 /*右边内容*/
 .yRightContent{
@@ -290,7 +290,7 @@ h1.logo img {
 	/*margin:-576px 0 0 238px;*/
 	background: #f1f3f3;
 	width:683px;
-	min-height:400px;
+	min-height:426px;
 	border-top:2px solid #ee4242;
 	display: inline-block;
 }
