@@ -1,0 +1,39 @@
+#Scontent{
+	width: 780px;
+	height: auto;
+	margin: 20px auto; 
+}
+.StitleBar{
+	
+	font-size: 18px;
+	background: #54bfbc;
+}
+.StitleBar h2{
+	font-weight: normal;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+}
+.StimePeople{
+	width: 300px;
+	height: 40px;
+	font-size: 12px;
+	color: red;
+	margin: 12px auto;
+}
+.StimePeople .Stime{
+	float: left;
+
+}
+.StimePeople .Speople{
+	float: right;
+}
+.StextArea{
+	width: 780px;
+	margin: 50px 0;
+
+}
+.StextArea p{
+	text-indent: 2em;
+	line-height: 30px;
+}
