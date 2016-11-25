@@ -1,4 +1,4 @@
-define(['Ajax'],function(jiao){
+define(['Ajax'],function(Ajax){
 	//在这里，window.onload 不起作用,但是可以直接访问页面中的元素包括图片（可能是放置在底部的原因）,保留疑问
 	/*window.onload = function () {
 		(function () {alert("加载完成运行")})();
@@ -7,7 +7,7 @@ define(['Ajax'],function(jiao){
 	// var contents = document.getElementsByClassName('container-content')[0];
 	// console.log(contents);
 
-	jiao.method('http://rap.taobao.org/mockjsdata/10008/user/listUser.do', 'GET', function (data) {
+	ajax('http://rap.taobao.org/mockjsdata/10008/user/listUser.do', 'GET', function (data) {
 		var memberData = JSON.parse(data).data,
 		html = ' ',
 		contents = document.getElementsByClassName('container-content')[0];
@@ -21,7 +21,7 @@ define(['Ajax'],function(jiao){
 							"<p>担任职位：<strong>" + memberData[i].position + "</strong></p>" +
 							"<p class='text-postion'>" + memberData[i].synopsis + "</p>" +
 							"<p class='text-addres'>邮箱：" + memberData[i].email + "</p>" +
-							"<a href='MembersDetil.html" + "?dc=" + memberData[i].id + "'><span class='text-readmore'>more</span></a>" +      
+							"<a href='jMembersDetil.html" + "?dc=" + memberData[i].id + "'><span class='text-readmore'>more</span></a>" +      
 						"</div>"+
 					"</div>"
 		}

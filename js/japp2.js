@@ -1,13 +1,13 @@
 // main.js (app.js 入口文件)
 
 require.config({
-	baseUrl: "js/lib"
+	baseUrl: "js/Jiao"
 })
-require(['common', 'Ajax', 'getSearchString'],function (common, jiao, postData){
+require(['common', 'Ajax', 'getSearchString'],function (common, Ajax, postData){
     container = document.getElementsByClassName('container-content')[0];
     //console.log(data);
     if (postData) {
-    	jiao.method('http://rap.taobao.org/mockjsdata/10008/user/userDetail.do', 'POST', function (data) {
+    	ajax('http://rap.taobao.org/mockjsdata/10008/user/userDetail.do', 'POST', function (data) {
     		var detil = JSON.parse(data).data,
     		honor = ' ',     
     		paper = ' ',

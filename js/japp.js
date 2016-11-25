@@ -1,7 +1,7 @@
 // main.js (app.js 入口文件)
 
 require.config({
-	baseUrl: "js/lib"
+	baseUrl: "js/Jiao"
 })
 
 

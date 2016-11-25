@@ -1,11 +1,11 @@
 require.config({
-	baseUrl: "js/lib"
+	baseUrl: "js/Jiao"
 })
 
 
-require(['common', 'Ajax', 'getSearchString'],function (common, jiao, postData) {
+require(['common', 'Ajax', 'getSearchString'],function (common, Ajax, postData) {
 	if(postData){
-		jiao.method('http://rap.taobao.org/mockjsdata/10008/activity/activityDetail.do', 'POST', function (data) {
+		ajax('http://rap.taobao.org/mockjsdata/10008/activity/activityDetail.do', 'POST', function (data) {
 			var html = ' ',
 			container = document.getElementsByClassName('container-content')[0],
 			detil = JSON.parse(data).data;

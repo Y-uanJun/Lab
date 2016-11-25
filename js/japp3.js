@@ -1,12 +1,12 @@
 // main.js (app.js 入口文件)
 
 require.config({
-	baseUrl: "js/lib"
+	baseUrl: "js/Jiao"
 })
 
 
-require(['common','Ajax'],function (common, jiao){
-	jiao.method('http://rap.taobao.org/mockjsdata/10008/activity/listActivity.do','GET', function (data) {
+require(['common','Ajax'],function (common, Ajax){
+	ajax('http://rap.taobao.org/mockjsdata/10008/activity/listActivity.do','GET', function (data) {
 		var activityData = JSON.parse(data).data.list;
 		var len = activityData.length,  		// 信息的总条数
 		num = 3, 								// 每一页显示的条数
@@ -65,7 +65,7 @@ require(['common','Ajax'],function (common, jiao){
 							"<div><span>" + indexer.date + "</span>发布人：<strong>" + indexer.author + "</strong></div>" +
 							"<h3>" + indexer.title + "</h3>" +
 							"<p>" + indexer.summary + "</p>" +
-							"<a href='activityDetil.html" + "?dc=" + indexer.id + "'><span class='readmore'>课程详情 </span></a>" +
+							"<a href='jActivityDetil.html" + "?dc=" + indexer.id + "'><span class='readmore'>课程详情 </span></a>" +
 						"</div>";
 			}
 			container.innerHTML = html;

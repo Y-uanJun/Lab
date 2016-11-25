@@ -60,7 +60,7 @@ requirejs(['jquery','STime','Ajax'],function($,STime,Ajax){
              "<span>"+nowData.date + "</span>"+
              "</div>"+
              "<div class='conCon'>"+nowData.summary + "</div>"+
-             "<a href='graduatedDetail.html"+"?dc="+ nowData.id + "'>" + "<span class='conMore'>" + "阅读原文" + "</span>"+"</a>"
+             "<a href='SgraduatedDetail.html"+"?dc="+ nowData.id + "'>" + "<span class='conMore'>" + "阅读原文" + "</span>"+"</a>"
              "</div>"
              scontent.innerHTML+=html;
  		}	
