@@ -1,0 +1,74 @@
+#Scontent{
+	margin:0 auto;
+	padding: 0;
+	width:780px;
+	height: auto;
+}
+
+.content-list{
+	float: left;
+	width: 175px;
+	height: 400px; 
+	margin:0 10px 0 10px;
+	margin-bottom: 20px;
+}
+.content-list img{
+	margin:0;
+	padding:0;
+	width: 175px;
+	height: 200px;
+
+}
+.content-list h3{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+.content-list .Scon{
+	margin:0 auto;
+	padding: 0;
+	width: 150px;
+	height: 50px;
+	margin-bottom: 20px;
+}
+.content-list h5{
+	margin:0;
+	padding: 0;
+}
+.content-list p{
+	margin:0;
+	padding: 0;
+}
+
+/*
+.Scontent ul li{
+	float: left;
+	width: 780px;
+	margin-bottom: 20px;
+	list-style: none;
+}
+.Scontent ul li div{
+	width: 175px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+.Scontent ul li img{
+	width: 100%;
+	margin:0 0 0 10px;
+}
+.Scontent ul li .name{
+	font-size: 14px;
+	height: 30px;
+	width: 50px;
+	margin:0 auto;
+}
+.Scontent ul li p{
+	font-size: 14px;
+}
+.Scontent ul li .content{
+	height: 30px;
+	width: 100%;
+
+}*/
